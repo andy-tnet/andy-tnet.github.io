@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="keywords" content="footer, address, phone, icons" />
+
+        <link rel="stylesheet" href="{% static '/static/css/bootstrap.css' %}">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 0px;
+            }
+        </style>
+        <link rel="stylesheet" href="{% static '/static/css/bootstrap-theme.css' %}">
+        <link rel="stylesheet" href="{% static '/static/css/main.css' %}">
+
+        <link rel="stylesheet" href="{% static '/static/css/bootstrap.css' %}">
+
+      	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+      	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+        <script src="{% static '/static/js/vendor/modernizr-2.6.2.js' %}"></script>
+
+    </head>
+
+    <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+            <!-- Each image is 350px by 233px -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url "/index.html" %}"><img src="{% static '/static/images/mavHead.png'%}"  alt="" /></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="{% if_current_page '/index.html' 'active' '' %}"><a href="{% url '/index.html' %}">Home</a></li>
+            <li class="{% if_current_page '/about.html' 'active' '' %}"><a href="{% url '/about.html' %}">About</a></li>
+            <li class="{% if_current_page '/contact.html' 'active' '' %}"><a href="{% url '/contact.html' %}">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <!-- www.asgco.com
+www.ppipella.com
+1.       www.joyglobal.com
+www.rematiptop.com -->
+<li class="dropdown-header">In Stock</li>
+<li><a href="{% url '/products.html' %}">Inventory</a></li>
+<li class="divider"></li>
+<li class="dropdown-header">Products from</li>
+                <li><a href="http://www.asgco.com/">ASGCO</a></li>
+                <li><a href="http://www.continentalconveyor.ca/">Continental</a></li>
+                <li><a href="http://www.joyglobal.com">Joy Global</a></li>
+                <li><a href="http://www.ppipella.com/">PPI</a></li>
+                <li><a href="http://www.rematiptop.com/">Rema Tip Top</a></li>
+              </ul>
+            </li>
+            <li class="{% if_current_page '/services.html' 'active' '' %}"><a href="{% url '/services.html' %}">Services</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <!-- <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button> -->
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    <div id='headContainer'>
+    <img id='headImage'src="{% static '/static/images/possibleHead.png'%}" alt="" />
+  </div>
+<div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+    {% block body %}
+    {% endblock %}
+    {% include 'footer.html' %}
+
+    <script src="{% static '/static/js/vendor/jquery-1.10.1.js' %}"></script>
+    <script src="{% static '/static/js/vendor/bootstrap.js' %}"></script>
+    <script src="{% static '/static/js/main.js' %}"></script>
+  </body>
+
+  {% block scripts %}
+  {% endblock %}
+
+</html>

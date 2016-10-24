@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="jumbotron">
+    <h1>Contact Us </h1>
+    <div class="well" id="relatively-well">
+    <table style="width:100%">
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><h3><a href="https://www.google.com/maps/@38.2129135,-90.6613495,3a,75y,62h,90t/data=!3m6!1e1!3m4!1st-PdugtmYAmwiciH3zmrYQ!2e0!7i13312!8i6656!6m1!1e1">Office</a></h3></td>
+    <td>Phone:	636-452-3600</td>
+    <td>Fax: 636-452-3656</td>
+  </tr>
+  <tr>
+    <td><h3>Manager<h3></td>
+    <td>Kim Taylor</td>
+<td><a href="mailto:kim@midamericavulcanizing.com">kim@midamericavulcanizing.com</a> </td>
+  </tr>
+  <tr>
+    <td><h3>Service<h3></td>
+    <td>Roger Hopper</td>
+<td><a href="mailto:roger@midamericavulcanizing.com">roger@midamericavulcanizing.com</a> </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Jeff Hopper</td>
+<td><a href="mailto:jeff@midamericavulcanizing.com">jeff@midamericavulcanizing.com</a> </td>
+  </tr>
+  <tr>
+    <td><h3>Sales<h3></td>
+    <td>Steve Eime</td>
+<td><a href="mailto:steve@midamericavulcanizing.com">steve@midamericavulcanizing.com</a> </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Chris D’Aquila</td>
+<td><a href="mailto:chris@midamericavulcanizing.com">chris@midamericavulcanizing.com</a> </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Josh Stark</td>
+<td><a href="mailto:josh@midamericavulcanizing.com">josh@midamericavulcanizing.com</a> </td>
+  </tr>
+</table>
+</div>
+</div>
+<div class="absolute">
+    <form id="contact" action="" method="post">
+      <h3>MAV Contact Form</h3>
+      <h4>Contact us for custom quote</h4>
+      <fieldset>
+        <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Company Phone Number" type="tel" tabindex="3" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Your Company" type="text" tabindex="4" required>
+      </fieldset>
+      <fieldset>
+        <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+      <p>
+        <center>Thank you for your inquiry.</center>
+      </p>
+    </form>
+</div>
+</div>
+{% endblock %}
